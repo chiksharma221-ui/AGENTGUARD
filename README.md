@@ -1,51 +1,50 @@
-&#x20;\<div align="center">
-&#x20; \<img src="docs/images/agentguard-banner.png" alt="AgentGuard Banner" width="100%">
-
-# 🛡️ AgentGuard
+# AgentGuard
 
 ### The Security & Governance Layer for Autonomous AI Agents
 
-**Govern the Agents. Control the Execution. Trust the Process.**
+\<p align="center">
+&#x20; \<img src="docs/images/agentguard-banner.png" alt="AgentGuard Banner" width="100%">
+\</p>
 
-&#x20; \<p>     \<img src="[https://img.shields.io/badge/Python-3.12-blue?logo=python](https://img.shields.io/badge/Python-3.12-blue?logo=python)" alt="Python">     \<img src="[https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)" alt="FastAPI">     \<img src="[https://img.shields.io/badge/React-Frontend-61DAFB?logo=react](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)" alt="React">     \<img src="[https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql](https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql)" alt="PostgreSQL">     \<img src="[https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis](https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis)" alt="Redis">     \<img src="[https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)" alt="Docker">   \</p>
+\<p align="center">   \<strong>Govern the Agents. Control the Execution. Trust the Process.\</strong> \</p>
 
-&#x20; \<p>     \<b>AI Agent Security · Policy Enforcement · Human-in-the-Loop · Auditability\</b>   \</p> \</div>
+\<p align="center">   \<img src="[https://img.shields.io/badge/Python-3.12-blue?logo=python](https://img.shields.io/badge/Python-3.12-blue?logo=python)" alt="Python">   \<img src="[https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)" alt="FastAPI">   \<img src="[https://img.shields.io/badge/React-Frontend-61DAFB?logo=react](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)" alt="React">   \<img src="[https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql](https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql)" alt="PostgreSQL">   \<img src="[https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis](https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis)" alt="Redis">   \<img src="[https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)" alt="Docker"> \</p>
 
----
-
-## 🚀 What is AgentGuard?
-
-**AI agents are becoming powerful enough to interact with real enterprise systems. But autonomy without governance creates risk.**
-
-What happens when an AI agent attempts to delete a production database, modify a sensitive file, or access an unauthorized resource?
-
-AgentGuard introduces a centralized governance layer between autonomous AI agents and the tools they use.
-
-It authenticates agents, evaluates every tool invocation against security policies, enforces risk-based authorization, routes sensitive operations for human approval, and maintains an auditable execution history.
-
-Instead of blindly trusting AI agents, AgentGuard ensures that their actions remain controlled, authorized, and traceable.
-
-> **The goal: Give AI agents the ability to act, without giving them unrestricted authority.**
+\<p align="center">   \<strong>AI Agent Security | Policy Enforcement | Human-in-the-Loop | Auditability\</strong> \</p>
 
 ---
 
-## ✨ Key Features
+## Overview
 
-| Feature                     | Description                                                        |
-| --------------------------- | ------------------------------------------------------------------ |
-| 🧠 Multi-Agent Governance   | Manage and authenticate multiple AI agents independently           |
-| 🔐 Agent Authentication     | API-key-based agent identity and JWT user authentication           |
-| ⚖️ Risk-Based Policy Engine | Evaluate operations based on tool permissions, risk, and arguments |
-| 👤 Human-in-the-Loop        | Require human authorization for sensitive operations               |
-| ⚙️ Secure Execution Gateway | Centralized execution of filesystem, GitHub, and database tools    |
-| 🔗 Tamper-Evident Auditing  | SHA-256 linked audit records for execution traceability            |
-| ⏱️ Approval Expiry          | Automatically expire pending authorization requests                |
-| 📊 Governance Dashboard     | Monitor agents, policies, approvals, and audit activity            |
-| 🛑 Fail-Closed Security     | Deny operations without a matching authorization policy            |
+Autonomous AI agents are increasingly capable of interacting with enterprise systems, accessing files, modifying databases, managing repositories, and executing external tools.
+
+However, granting agents access to organizational resources without proper governance introduces significant security risks.
+
+What happens when an AI agent attempts to delete sensitive data, modify an unauthorized file, or execute a potentially destructive operation?
+
+**AgentGuard introduces a centralized governance layer between autonomous AI agents and the tools they interact with.**
+
+It authenticates agents, evaluates tool invocations against configurable security policies, enforces risk-based authorization, routes sensitive operations through human approval workflows, and maintains an auditable record of agent activity.
+
+The objective is to enable autonomous execution while maintaining organizational control, accountability, and security.
+
+## Key Features
+
+| Capability                 | Description                                                                               |
+| -------------------------- | ----------------------------------------------------------------------------------------- |
+| Multi-Agent Governance     | Register, authenticate, and manage multiple AI agents independently.                      |
+| Agent Authentication       | API-key-based agent identity and JWT-based user authentication.                           |
+| Risk-Based Policy Engine   | Evaluate operations using configurable permissions, risk levels, and argument conditions. |
+| Human-in-the-Loop Approval | Require human authorization before executing sensitive operations.                        |
+| Secure Execution Gateway   | Centralized execution of filesystem, GitHub, and database tools.                          |
+| Tamper-Evident Auditing    | SHA-256-linked audit records for execution traceability.                                  |
+| Approval Expiry            | Automatically expire pending authorization requests.                                      |
+| Governance Dashboard       | Monitor agents, policies, approvals, and audit activity.                                  |
+| Fail-Closed Security       | Deny operations without a matching authorization policy.                                  |
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TB
@@ -76,18 +75,21 @@ flowchart TB
     I --> M["Governance Dashboard"]
 ```
 
-### 🔄 Request Lifecycle
+### Request Lifecycle
 
 ```mermaid
 flowchart LR
     A["Agent Request"] --> B["Authentication"]
     B --> C["Policy Evaluation"]
-    C --> D{"Decision"}
+    C --> D{"Authorization Decision"}
+
     D -->|"Allowed"| E["Execute"]
     D -->|"Approval Required"| F["Human Review"]
     D -->|"Denied"| G["Reject"]
+
     F -->|"Approved"| E
     F -->|"Rejected"| G
+
     E --> H["Audit Log"]
     G --> H
 ```
@@ -95,63 +97,51 @@ flowchart LR
 Every tool invocation follows a controlled lifecycle:
 
 1. **Authenticate:** Validate the agent identity and API credentials.
-2. **Evaluate:** Match the requested operation against security policies.
-3. **Assess:** Determine the risk and authorization requirements.
+2. **Evaluate:** Match the requested operation against configured security policies.
+3. **Assess:** Determine risk and authorization requirements.
 4. **Approve:** Route sensitive operations to an authorized human.
-5. **Execute:** Invoke the appropriate tool handler.
+5. **Execute:** Invoke the appropriate tool handler after authorization.
 6. **Audit:** Record the decision and execution lifecycle.
 
 ---
 
-## 🖥️ Application Screenshots
+## Application Screenshots
 
-The following sections are intended for genuine screenshots captured from the running application.
+The following sections reference screenshots from the AgentGuard application. Add the corresponding image files to the repository to display them.
 
-\<div align="center">
+### 1. Governance Dashboard
 
-### 01. Governance Dashboard
 
-\<img src="docs/screenshots/dashboard.png" width="100%" alt="AgentGuard Governance Dashboard">
 
-*Centralized overview of agents, tool invocations, approvals, and security activity.*
+Centralized overview of registered agents, tool invocations, approvals, and security activity.
 
----
+### 2. Policy Management
 
-### 02. Policy Management
 
-\<img src="docs/screenshots/policies.png" width="100%" alt="AgentGuard Policy Management">
 
-*Configure tool permissions, risk levels, and authorization decisions.*
+Configure tool permissions, risk classifications, and authorization decisions.
 
----
+### 3. Human Approval Workflow
 
-### 03. Human Approval Workflow
 
-\<img src="docs/screenshots/approvals.png" width="100%" alt="AgentGuard Approval Workflow">
 
-*Review, approve, or reject sensitive AI agent operations.*
+Review, approve, or reject sensitive AI agent operations.
 
----
+### 4. Audit Logs and Telemetry
 
-### 04. Audit Logs & Telemetry
 
-\<img src="docs/screenshots/audit-logs.png" width="100%" alt="AgentGuard Audit Dashboard">
 
-*Inspect agent activity, execution outcomes, and audit records.*
+Inspect agent activity, execution outcomes, and audit records.
 
 ---
 
-\</div>
-
----
-
-## 🔐 Core Governance Capabilities
+## Core Governance Capabilities
 
 ### 1. Risk-Based Policy Engine
 
 AgentGuard evaluates tool invocations using configurable authorization rules.
 
-- Tool-specific policies.
+- Tool-specific security policies.
 - Risk classifications: LOW, MEDIUM, HIGH, CRITICAL.
 - Allow, deny, and approval-required decisions.
 - Argument-based policy conditions.
@@ -180,24 +170,24 @@ AgentGuard provides controlled access to organizational resources.
 
 ### 4. Multi-Agent Identity
 
-Each registered agent receives an individual API credential and operates under the configured governance policies.
+Each registered agent receives an individual API credential and operates under configured governance policies.
 
 ### 5. Tamper-Evident Audit Trail
 
-AgentGuard maintains SHA-256 linked audit records to support traceability and integrity verification.
+AgentGuard maintains SHA-256-linked audit records to support traceability and integrity verification.
 
 ### 6. Role-Based Access Control
 
 | Role             | Access                                                |
 | ---------------- | ----------------------------------------------------- |
-| Administrator    | Users, agents, policies, approvals, audit records     |
+| Administrator    | Users, agents, policies, approvals, and audit records |
 | Developer        | Tool access and personal audit telemetry              |
 | Approver         | Approval queues and audit records                     |
 | Security Officer | Policy management and organization-wide audit records |
 
 ---
 
-## ⚖️ Default Governance Policies
+## Default Governance Policies
 
 | Tool                      | Risk     | Decision         |
 | ------------------------- | -------- | ---------------- |
@@ -219,24 +209,26 @@ AgentGuard maintains SHA-256 linked audit records to support traceability and in
 
 ---
 
-## 🧪 Governance Demonstration Scenarios
+## Governance Demonstration Scenarios
 
 The demo client includes eight scenarios designed to demonstrate the governance lifecycle.
 
-| #  | Scenario                   | Expected Outcome                         |
-| -- | -------------------------- | ---------------------------------------- |
-| 01 | Low-risk file read         | Automatically allowed                    |
-| 02 | High-risk file deletion    | Human approval required                  |
-| 03 | Critical database deletion | Human rejection                          |
-| 04 | Path traversal attempt     | Denied                                   |
-| 05 | Argument tampering         | Integrity verification failure           |
-| 06 | Approval expiry            | Request expires without execution        |
-| 07 | Multi-agent governance     | Individual agent identities maintained   |
-| 08 | Audit inspection           | Execution lifecycle available for review |
+| No. | Scenario                   | Expected Outcome                         |
+| --- | -------------------------- | ---------------------------------------- |
+| 1   | Low-risk file read         | Automatically allowed                    |
+| 2   | High-risk file deletion    | Human approval required                  |
+| 3   | Critical database deletion | Human rejection                          |
+| 4   | Path traversal attempt     | Denied                                   |
+| 5   | Argument tampering         | Integrity verification failure           |
+| 6   | Approval expiry            | Request expires without execution        |
+| 7   | Multi-agent governance     | Individual agent identities maintained   |
+| 8   | Audit inspection           | Execution lifecycle available for review |
 
 ---
 
-## 🛡️ Security Architecture
+## Security Architecture
+
+Security is integrated into the execution lifecycle rather than treated as an afterthought.
 
 | Security Layer       | Implementation                                      |
 | -------------------- | --------------------------------------------------- |
@@ -255,9 +247,7 @@ The demo client includes eight scenarios designed to demonstrate the governance 
 
 ---
 
-## 🧰 Technology Stack
-
-\<div align="center">
+## Technology Stack
 
 | Component        | Technology             |
 | ---------------- | ---------------------- |
@@ -274,11 +264,9 @@ The demo client includes eight scenarios designed to demonstrate the governance 
 | Containerization | Docker, Docker Compose |
 | Visualization    | Recharts               |
 
-\</div>
-
 ---
 
-## ⚡ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -299,14 +287,15 @@ cd AGENTGUARD
 cp .env.example .env
 ```
 
-Configure your environment:
+Configure the required environment variables:
 
-- Set a secure `SECRET_KEY` (minimum 32 characters).
-- Configure PostgreSQL and Redis connection settings.
+- Set a secure `SECRET_KEY` of at least 32 characters.
+- Configure PostgreSQL connection settings.
+- Configure Redis connection settings.
 - Optionally configure `GITHUB_TOKEN`.
 - Configure `OPENAI_API_KEY` for the LangGraph demonstration.
 
-**Never commit `.env` or real credentials to GitHub.**
+Never commit `.env` files or real credentials to GitHub.
 
 ### 3. Start with Docker Compose
 
@@ -314,7 +303,7 @@ Configure your environment:
 docker compose up -d
 ```
 
-The intended environment includes:
+The Docker Compose environment is intended to start:
 
 - PostgreSQL 16
 - Redis 7
@@ -352,11 +341,15 @@ Run the LangGraph demonstration:
 python langgraph_agent.py
 ```
 
+The LangGraph demonstration requires an appropriate LLM API key.
+
 ---
 
-## 🔌 Agent Integration
+## Agent Integration
 
 AgentGuard exposes a centralized HTTP tool invocation endpoint.
+
+Example using Python and HTTPX:
 
 ```python
 import httpx
@@ -381,7 +374,7 @@ The gateway evaluates the request and returns the corresponding governance or ex
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 Interactive API documentation is available at:
 
@@ -409,7 +402,7 @@ Interactive API documentation is available at:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 AGENTGUARD/
@@ -444,6 +437,7 @@ AGENTGUARD/
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── SECURITY.md
+│   ├── images/
 │   └── screenshots/
 │
 ├── docker-compose.yml
@@ -453,7 +447,7 @@ AGENTGUARD/
 
 ---
 
-## 🔮 Future Scope
+## Future Scope
 
 - Native MCP protocol transport and broader client compatibility.
 - Advanced anomaly detection for agent behavior.
@@ -464,28 +458,25 @@ AGENTGUARD/
 
 ---
 
-## 💡 The Bigger Idea
+## Project Vision
 
 AI agents should be autonomous enough to be useful, but controlled enough to be trusted.
 
 AgentGuard explores how organizations can introduce a governance layer around autonomous AI execution, bringing together authentication, authorization, policy enforcement, human oversight, and auditability.
 
+The objective is to make AI agent execution more secure, transparent, and accountable.
+
 **Autonomy without governance is risk. AgentGuard puts control back into the execution lifecycle.**
 
 ---
 
-\<div align="center">
+## License
 
-# 🛡️ AgentGuard
-
-**Govern the Agents. Control the Execution. Trust the Process.**
-
-Built with a focus on AI infrastructure, security engineering, and enterprise agent governance.
-
-\</div>
+MIT License.
 
 ---
 
-### License
-
-MIT License.
+\<p align="center">
+&#x20; \<strong>AgentGuard\</strong>\<br>
+&#x20; Govern the Agents. Control the Execution. Trust the Process.
+\</p>
