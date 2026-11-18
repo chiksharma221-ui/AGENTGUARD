@@ -32,6 +32,8 @@ It authenticates agents, evaluates tool invocations against configurable securit
 
 The objective is to enable autonomous execution while maintaining organizational control, accountability, and security.
 
+---
+
 ## Key Features
 
 | Capability | Description |
@@ -109,31 +111,27 @@ Every tool invocation follows a controlled lifecycle:
 
 ---
 
-## Application Screenshots
+## Application Preview
 
-### 1. Governance Dashboard
+AgentGuard provides a centralized governance interface for managing AI agent activity.
 
-![AgentGuard Dashboard](docs/screenshots/dashboard.png)
+### Governance Dashboard
 
-Centralized overview of registered agents, tool invocations, approvals, and security activity.
+Monitor registered agents, tool invocations, approvals, and security activity.
 
-### 2. Policy Management
-
-![AgentGuard Policy Management](docs/screenshots/policies.png)
+### Policy Management
 
 Configure tool permissions, risk classifications, and authorization decisions.
 
-### 3. Human Approval Workflow
-
-![AgentGuard Approval Workflow](docs/screenshots/approvals.png)
+### Human Approval Workflow
 
 Review, approve, or reject sensitive AI agent operations.
 
-### 4. Audit Logs and Telemetry
-
-![AgentGuard Audit Dashboard](docs/screenshots/audit-logs.png)
+### Audit Logs and Telemetry
 
 Inspect agent activity, execution outcomes, and audit records.
+
+> Actual application screenshots can be added to this section when captured from the running dashboard. No illustrative mockups are presented as real application screenshots.
 
 ---
 
