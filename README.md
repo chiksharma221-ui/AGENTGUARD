@@ -1,16 +1,20 @@
+
 # AgentGuard
 
 ### The Security & Governance Layer for Autonomous AI Agents
 
-\<p align="center">
-&#x20; \<img src="docs/images/agentguard-banner.png" alt="AgentGuard Banner" width="100%">
-\</p>
+![AgentGuard Banner](docs/images/agentguard-banner.png)
 
-\<p align="center">   \<strong>Govern the Agents. Control the Execution. Trust the Process.\</strong> \</p>
+**Govern the Agents. Control the Execution. Trust the Process.**
 
-\<p align="center">   \<img src="[https://img.shields.io/badge/Python-3.12-blue?logo=python](https://img.shields.io/badge/Python-3.12-blue?logo=python)" alt="Python">   \<img src="[https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)" alt="FastAPI">   \<img src="[https://img.shields.io/badge/React-Frontend-61DAFB?logo=react](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)" alt="React">   \<img src="[https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql](https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql)" alt="PostgreSQL">   \<img src="[https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis](https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis)" alt="Redis">   \<img src="[https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)" alt="Docker"> \</p>
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)](https://react.dev/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql)](https://postgresql.org/)
+[![Redis](https://img.shields.io/badge/Redis-Queue-DC382D?logo=redis)](https://redis.io/)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)](https://docker.com/)
 
-\<p align="center">   \<strong>AI Agent Security | Policy Enforcement | Human-in-the-Loop | Auditability\</strong> \</p>
+**AI Agent Security | Policy Enforcement | Human-in-the-Loop | Auditability**
 
 ---
 
@@ -30,17 +34,17 @@ The objective is to enable autonomous execution while maintaining organizational
 
 ## Key Features
 
-| Capability                 | Description                                                                               |
-| -------------------------- | ----------------------------------------------------------------------------------------- |
-| Multi-Agent Governance     | Register, authenticate, and manage multiple AI agents independently.                      |
-| Agent Authentication       | API-key-based agent identity and JWT-based user authentication.                           |
-| Risk-Based Policy Engine   | Evaluate operations using configurable permissions, risk levels, and argument conditions. |
-| Human-in-the-Loop Approval | Require human authorization before executing sensitive operations.                        |
-| Secure Execution Gateway   | Centralized execution of filesystem, GitHub, and database tools.                          |
-| Tamper-Evident Auditing    | SHA-256-linked audit records for execution traceability.                                  |
-| Approval Expiry            | Automatically expire pending authorization requests.                                      |
-| Governance Dashboard       | Monitor agents, policies, approvals, and audit activity.                                  |
-| Fail-Closed Security       | Deny operations without a matching authorization policy.                                  |
+| Capability | Description |
+|---|---|
+| Multi-Agent Governance | Register, authenticate, and manage multiple AI agents independently. |
+| Agent Authentication | API-key-based agent identity and JWT-based user authentication. |
+| Risk-Based Policy Engine | Evaluate operations using configurable permissions, risk levels, and argument conditions. |
+| Human-in-the-Loop Approval | Require human authorization before executing sensitive operations. |
+| Secure Execution Gateway | Centralized execution of filesystem, GitHub, and database tools. |
+| Tamper-Evident Auditing | SHA-256-linked audit records for execution traceability. |
+| Approval Expiry | Automatically expire pending authorization requests. |
+| Governance Dashboard | Monitor agents, policies, approvals, and audit activity. |
+| Fail-Closed Security | Deny operations without a matching authorization policy. |
 
 ---
 
@@ -107,29 +111,27 @@ Every tool invocation follows a controlled lifecycle:
 
 ## Application Screenshots
 
-The following sections reference screenshots from the AgentGuard application. Add the corresponding image files to the repository to display them.
-
 ### 1. Governance Dashboard
 
-
+![AgentGuard Dashboard](docs/screenshots/dashboard.png)
 
 Centralized overview of registered agents, tool invocations, approvals, and security activity.
 
 ### 2. Policy Management
 
-
+![AgentGuard Policy Management](docs/screenshots/policies.png)
 
 Configure tool permissions, risk classifications, and authorization decisions.
 
 ### 3. Human Approval Workflow
 
-
+![AgentGuard Approval Workflow](docs/screenshots/approvals.png)
 
 Review, approve, or reject sensitive AI agent operations.
 
 ### 4. Audit Logs and Telemetry
 
-
+![AgentGuard Audit Dashboard](docs/screenshots/audit-logs.png)
 
 Inspect agent activity, execution outcomes, and audit records.
 
@@ -162,11 +164,11 @@ Sensitive operations can be routed through a human approval workflow.
 
 AgentGuard provides controlled access to organizational resources.
 
-| Integration | Supported Operations                                                                |
-| ----------- | ----------------------------------------------------------------------------------- |
-| Filesystem  | List, read, create, update, delete                                                  |
-| GitHub      | List repositories, get repository, create issue, create branch, update/delete files |
-| Database    | Execute SELECT, inspect schema, insert, update, delete                              |
+| Integration | Supported Operations |
+|---|---|
+| Filesystem | List, read, create, update, delete |
+| GitHub | List repositories, get repository, create issue, create branch, update/delete files |
+| Database | Execute SELECT, inspect schema, insert, update, delete |
 
 ### 4. Multi-Agent Identity
 
@@ -178,34 +180,34 @@ AgentGuard maintains SHA-256-linked audit records to support traceability and in
 
 ### 6. Role-Based Access Control
 
-| Role             | Access                                                |
-| ---------------- | ----------------------------------------------------- |
-| Administrator    | Users, agents, policies, approvals, and audit records |
-| Developer        | Tool access and personal audit telemetry              |
-| Approver         | Approval queues and audit records                     |
+| Role | Access |
+|---|---|
+| Administrator | Users, agents, policies, approvals, and audit records |
+| Developer | Tool access and personal audit telemetry |
+| Approver | Approval queues and audit records |
 | Security Officer | Policy management and organization-wide audit records |
 
 ---
 
 ## Default Governance Policies
 
-| Tool                      | Risk     | Decision         |
-| ------------------------- | -------- | ---------------- |
-| `filesystem.list_files`   | LOW      | ALLOW            |
-| `filesystem.read_file`    | LOW      | ALLOW            |
-| `filesystem.create_file`  | MEDIUM   | REQUIRE_APPROVAL |
-| `filesystem.update_file`  | MEDIUM   | REQUIRE_APPROVAL |
-| `filesystem.delete_file`  | HIGH     | REQUIRE_APPROVAL |
-| `github.list_repos`       | LOW      | ALLOW            |
-| `github.get_repo`         | LOW      | ALLOW            |
-| `github.create_issue`     | MEDIUM   | REQUIRE_APPROVAL |
-| `github.create_branch`    | MEDIUM   | REQUIRE_APPROVAL |
-| `github.delete_file`      | HIGH     | REQUIRE_APPROVAL |
-| `database.execute_select` | LOW      | ALLOW            |
-| `database.insert_record`  | MEDIUM   | REQUIRE_APPROVAL |
-| `database.update_record`  | HIGH     | REQUIRE_APPROVAL |
-| `database.delete_record`  | CRITICAL | REQUIRE_APPROVAL |
-| Unknown operations        | —        | DENY             |
+| Tool | Risk | Decision |
+|---|---|---|
+| `filesystem.list_files` | LOW | ALLOW |
+| `filesystem.read_file` | LOW | ALLOW |
+| `filesystem.create_file` | MEDIUM | REQUIRE_APPROVAL |
+| `filesystem.update_file` | MEDIUM | REQUIRE_APPROVAL |
+| `filesystem.delete_file` | HIGH | REQUIRE_APPROVAL |
+| `github.list_repos` | LOW | ALLOW |
+| `github.get_repo` | LOW | ALLOW |
+| `github.create_issue` | MEDIUM | REQUIRE_APPROVAL |
+| `github.create_branch` | MEDIUM | REQUIRE_APPROVAL |
+| `github.delete_file` | HIGH | REQUIRE_APPROVAL |
+| `database.execute_select` | LOW | ALLOW |
+| `database.insert_record` | MEDIUM | REQUIRE_APPROVAL |
+| `database.update_record` | HIGH | REQUIRE_APPROVAL |
+| `database.delete_record` | CRITICAL | REQUIRE_APPROVAL |
+| Unknown operations | — | DENY |
 
 ---
 
@@ -213,56 +215,54 @@ AgentGuard maintains SHA-256-linked audit records to support traceability and in
 
 The demo client includes eight scenarios designed to demonstrate the governance lifecycle.
 
-| No. | Scenario                   | Expected Outcome                         |
-| --- | -------------------------- | ---------------------------------------- |
-| 1   | Low-risk file read         | Automatically allowed                    |
-| 2   | High-risk file deletion    | Human approval required                  |
-| 3   | Critical database deletion | Human rejection                          |
-| 4   | Path traversal attempt     | Denied                                   |
-| 5   | Argument tampering         | Integrity verification failure           |
-| 6   | Approval expiry            | Request expires without execution        |
-| 7   | Multi-agent governance     | Individual agent identities maintained   |
-| 8   | Audit inspection           | Execution lifecycle available for review |
+| No. | Scenario | Expected Outcome |
+|---|---|---|
+| 1 | Low-risk file read | Automatically allowed |
+| 2 | High-risk file deletion | Human approval required |
+| 3 | Critical database deletion | Human rejection |
+| 4 | Path traversal attempt | Denied |
+| 5 | Argument tampering | Integrity verification failure |
+| 6 | Approval expiry | Request expires without execution |
+| 7 | Multi-agent governance | Individual agent identities maintained |
+| 8 | Audit inspection | Execution lifecycle available for review |
 
 ---
 
 ## Security Architecture
 
-Security is integrated into the execution lifecycle rather than treated as an afterthought.
-
-| Security Layer       | Implementation                                      |
-| -------------------- | --------------------------------------------------- |
-| User Authentication  | JWT, HS256                                          |
-| Password Security    | bcrypt                                              |
-| Agent Authentication | SHA-256 hashed API keys                             |
-| Argument Integrity   | Canonical JSON hashing                              |
-| Approval Protection  | Single-use approvals and argument hash verification |
-| Filesystem Security  | Sandboxed path validation                           |
-| SQL Security         | Parameterized queries and SELECT validation         |
-| Rate Limiting        | slowapi                                             |
-| Audit Integrity      | SHA-256 hash chaining                               |
-| Authorization        | Role-based access control                           |
-| Default Policy       | Fail-closed authorization                           |
-| Configuration        | Environment-based secrets                           |
+| Security Layer | Implementation |
+|---|---|
+| User Authentication | JWT, HS256 |
+| Password Security | bcrypt |
+| Agent Authentication | SHA-256 hashed API keys |
+| Argument Integrity | Canonical JSON hashing |
+| Approval Protection | Single-use approvals and argument hash verification |
+| Filesystem Security | Sandboxed path validation |
+| SQL Security | Parameterized queries and SELECT validation |
+| Rate Limiting | slowapi |
+| Audit Integrity | SHA-256 hash chaining |
+| Authorization | Role-based access control |
+| Default Policy | Fail-closed authorization |
+| Configuration | Environment-based secrets |
 
 ---
 
 ## Technology Stack
 
-| Component        | Technology             |
-| ---------------- | ---------------------- |
-| Backend          | Python, FastAPI        |
-| Frontend         | React 18, Vite         |
-| Styling          | Tailwind CSS           |
-| State Management | Zustand                |
-| Data Fetching    | React Query            |
-| Database         | PostgreSQL, SQLAlchemy |
-| Background Jobs  | Celery                 |
-| Message Broker   | Redis                  |
-| Authentication   | JWT, bcrypt            |
-| Agent Framework  | LangGraph              |
+| Component | Technology |
+|---|---|
+| Backend | Python, FastAPI |
+| Frontend | React 18, Vite |
+| Styling | Tailwind CSS |
+| State Management | Zustand |
+| Data Fetching | React Query |
+| Database | PostgreSQL, SQLAlchemy |
+| Background Jobs | Celery |
+| Message Broker | Redis |
+| Authentication | JWT, bcrypt |
+| Agent Framework | LangGraph |
 | Containerization | Docker, Docker Compose |
-| Visualization    | Recharts               |
+| Visualization | Recharts |
 
 ---
 
@@ -314,11 +314,11 @@ The Docker Compose environment is intended to start:
 
 ### 4. Access AgentGuard
 
-| Service           | URL                                                          |
-| ----------------- | ------------------------------------------------------------ |
-| Dashboard         | [http://localhost:3000](http://localhost:3000)               |
-| API Documentation | [http://localhost:8000/docs](http://localhost:8000/docs)     |
-| Health Endpoint   | [http://localhost:8000/health](http://localhost:8000/health) |
+| Service | URL |
+|---|---|
+| Dashboard | http://localhost:3000 |
+| API Documentation | http://localhost:8000/docs |
+| Health Endpoint | http://localhost:8000/health |
 
 ### 5. Run Demo Agent Clients
 
@@ -380,25 +380,25 @@ Interactive API documentation is available at:
 
 `http://localhost:8000/docs`
 
-| Endpoint                   | Method   | Description                   |
-| -------------------------- | -------- | ----------------------------- |
-| `/auth/login`              | POST     | Obtain JWT tokens             |
-| `/auth/refresh`            | POST     | Refresh access token          |
-| `/auth/me`                 | GET      | Current user information      |
-| `/agents`                  | GET/POST | List and register agents      |
-| `/agents/{id}/toggle`      | POST     | Enable or disable agent       |
-| `/agents/{id}/credentials` | POST     | Generate agent API key        |
-| `/mcp/invoke`              | POST     | Main tool invocation gateway  |
-| `/mcp/tools`               | GET      | List registered tools         |
-| `/mcp/result/{id}`         | POST     | Poll approval result          |
-| `/policies`                | GET/POST | Manage policies               |
-| `/policies/evaluate`       | POST     | Test policy evaluation        |
-| `/approvals`               | GET      | Retrieve approval requests    |
-| `/approvals/{id}/decide`   | POST     | Approve or reject request     |
-| `/audit`                   | GET      | Query audit logs              |
-| `/audit/export`            | GET      | Export audit records          |
-| `/audit/stats`             | GET      | Retrieve telemetry statistics |
-| `/ws/approvals`            | WS       | Approval event updates        |
+| Endpoint | Method | Description |
+|---|---|---|
+| `/auth/login` | POST | Obtain JWT tokens |
+| `/auth/refresh` | POST | Refresh access token |
+| `/auth/me` | GET | Current user information |
+| `/agents` | GET/POST | List and register agents |
+| `/agents/{id}/toggle` | POST | Enable or disable agent |
+| `/agents/{id}/credentials` | POST | Generate agent API key |
+| `/mcp/invoke` | POST | Main tool invocation gateway |
+| `/mcp/tools` | GET | List registered tools |
+| `/mcp/result/{id}` | POST | Poll approval result |
+| `/policies` | GET/POST | Manage policies |
+| `/policies/evaluate` | POST | Test policy evaluation |
+| `/approvals` | GET | Retrieve approval requests |
+| `/approvals/{id}/decide` | POST | Approve or reject request |
+| `/audit` | GET | Query audit logs |
+| `/audit/export` | GET | Export audit records |
+| `/audit/stats` | GET | Retrieve telemetry statistics |
+| `/ws/approvals` | WS | Approval event updates |
 
 ---
 
@@ -476,7 +476,6 @@ MIT License.
 
 ---
 
-\<p align="center">
-&#x20; \<strong>AgentGuard\</strong>\<br>
-&#x20; Govern the Agents. Control the Execution. Trust the Process.
-\</p>
+**AgentGuard**
+
+Govern the Agents. Control the Execution. Trust the Process.
