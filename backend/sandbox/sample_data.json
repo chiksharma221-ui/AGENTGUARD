@@ -1,0 +1,10 @@
+{
+  "project": "AgentGuard",
+  "status": "ready",
+  "version": "1.0.0",
+  "supported_tools": [
+    "filesystem",
+    "github",
+    "database"
+  ]
+}
