@@ -3,7 +3,6 @@
 
 ### The Security & Governance Layer for Autonomous AI Agents
 
-![AgentGuard Banner](docs/images/agentguard-banner.png)
 
 **Govern the Agents. Control the Execution. Trust the Process.**
 
